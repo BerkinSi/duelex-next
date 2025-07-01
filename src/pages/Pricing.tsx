@@ -3,40 +3,16 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Check, Mail, Clock } from "lucide-react";
+import { Check, CreditCard, Calendar, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Pricing = () => {
-  const plans = [
-    {
-      name: "Free Trial",
-      price: "$0",
-      period: "for 14 days",
-      description: "Try DueLex risk-free for 2 weeks",
-      features: [
-        "Unlimited deadlines",
-        "Daily email reminders",
-        "Email support",
-        "Full deadline management"
-      ],
-      buttonText: "Start Free Trial",
-      buttonVariant: "outline" as const,
-      popular: false
-    },
-    {
-      name: "Pro",
-      price: "$9",
-      period: "per month",
-      description: "For busy legal professionals",
-      features: [
-        "Unlimited deadlines",
-        "Daily email reminders",
-        "Priority email support",
-        "Advanced deadline management"
-      ],
-      buttonText: "Start Pro Trial",
-      buttonVariant: "default" as const,
-      popular: true
-    }
+  const features = [
+    "Unlimited deadlines",
+    "Daily email reminders",
+    "Priority email support",
+    "Advanced deadline management",
+    "Secure & reliable service"
   ];
 
   return (
@@ -49,54 +25,84 @@ const Pricing = () => {
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Simple, Transparent Pricing
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            Start with a 2-week free trial, then just $9/month. No hidden fees, no long-term contracts.
+          <p className="text-xl text-gray-600 leading-relaxed mb-8">
+            Try DueLex free for 14 days, then continue for just $9/month. 
+            No credit card required to start.
           </p>
+          
+          <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="text-6xl font-bold text-gray-900 mb-2">$9</div>
+              <div className="text-xl text-gray-600">per month after trial</div>
+              <div className="text-sm text-gray-500 mt-2">14-day free trial • No setup fees</div>
+            </div>
+            
+            <div className="space-y-4 mb-8">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <Check className="text-green-600 flex-shrink-0" size={20} />
+                  <span className="text-gray-700">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <Link to="/signup">
+              <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg">
+                Start Your Free Trial
+              </Button>
+            </Link>
+            <p className="text-sm text-gray-500 mt-3 text-center">
+              No credit card required • Cancel anytime
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Pricing Cards */}
+      {/* How It Works Section */}
       <section className="py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {plans.map((plan) => (
-              <Card key={plan.name} className={`relative p-8 ${plan.popular ? 'border-blue-500 border-2 shadow-xl' : 'hover:shadow-lg'} transition-shadow`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      After Free Trial
-                    </span>
-                  </div>
-                )}
-                
-                <CardContent className="p-0">
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                    <div className="mb-2">
-                      <span className="text-5xl font-bold text-gray-900">{plan.price}</span>
-                      <span className="text-gray-600 ml-2">/{plan.period}</span>
-                    </div>
-                    <p className="text-gray-600">{plan.description}</p>
-                  </div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              How Our Pricing Works
+            </h2>
+            <p className="text-xl text-gray-600">
+              Simple and straightforward - exactly how legal professionals like it
+            </p>
+          </div>
 
-                  <div className="space-y-4 mb-8">
-                    {plan.features.map((feature, index) => (
-                      <div key={index} className="flex items-center gap-3">
-                        <Check className="text-green-600 flex-shrink-0" size={20} />
-                        <span className="text-gray-700">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="p-8 text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Calendar className="text-green-600" size={24} />
+              </div>
+              <h3 className="text-xl font-semibold mb-4">1. Start Free Trial</h3>
+              <p className="text-gray-600">
+                Sign up with just your email and start using DueLex immediately. 
+                Full access to all features for 14 days.
+              </p>
+            </Card>
 
-                  <Button 
-                    variant={plan.buttonVariant}
-                    className={`w-full py-3 ${plan.popular ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'border-blue-600 text-blue-600 hover:bg-blue-50'}`}
-                  >
-                    {plan.buttonText}
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+            <Card className="p-8 text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Mail className="text-blue-600" size={24} />
+              </div>
+              <h3 className="text-xl font-semibold mb-4">2. Use DueLex</h3>
+              <p className="text-gray-600">
+                Manage unlimited deadlines via email during your trial. 
+                Experience how DueLex can transform your practice.
+              </p>
+            </Card>
+
+            <Card className="p-8 text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <CreditCard className="text-purple-600" size={24} />
+              </div>
+              <h3 className="text-xl font-semibold mb-4">3. Continue for $9/month</h3>
+              <p className="text-gray-600">
+                After your trial, we'll ask for payment details. 
+                Continue seamlessly or cancel anytime with no fees.
+              </p>
+            </Card>
           </div>
         </div>
       </section>
@@ -113,20 +119,24 @@ const Pricing = () => {
           <div className="space-y-6">
             {[
               {
-                question: "What happens after my free trial ends?",
-                answer: "After your 14-day free trial, you'll be automatically enrolled in our Pro plan at $9/month. You can cancel anytime during or after the trial with no fees."
-              },
-              {
                 question: "Do I need to provide a credit card for the free trial?",
-                answer: "No credit card required! Just sign up with your email and start using DueLex immediately. We'll only ask for payment details when your trial is about to end."
+                answer: "No! Just sign up with your email and start using DueLex immediately. We'll only ask for payment details when your 14-day trial is about to end."
               },
               {
-                question: "Is there a discount for annual billing?",
-                answer: "Yes! Pay annually and save 20% on the Pro plan. That's just $86.40 per year instead of $108."
+                question: "What happens after my free trial ends?",
+                answer: "We'll send you an email a few days before your trial ends. If you want to continue, simply add your payment details and you'll be charged $9/month. If not, your account will be paused with no charges."
               },
               {
                 question: "Can I cancel anytime?",
                 answer: "Absolutely. Cancel your subscription at any time with no cancellation fees. Your service will continue until the end of your current billing period."
+              },
+              {
+                question: "Is there a discount for annual billing?",
+                answer: "Yes! Pay annually and save 20% on the monthly rate. That's just $86.40 per year instead of $108."
+              },
+              {
+                question: "What if I need to manage more than expected during my trial?",
+                answer: "No worries! Your trial includes unlimited deadlines and full access to all features. There are no restrictions during your 14-day trial period."
               }
             ].map((faq, index) => (
               <Card key={index} className="p-6">
@@ -141,6 +151,24 @@ const Pricing = () => {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-blue-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Deadline Management?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Join legal professionals who never miss deadlines with DueLex.
+          </p>
+          <Link to="/signup">
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
+              Start Your Free Trial
+            </Button>
+          </Link>
+          <p className="text-blue-200 mt-4">14 days free • No credit card required • $9/month after trial</p>
         </div>
       </section>
 
