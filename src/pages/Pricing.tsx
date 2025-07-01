@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -31,9 +30,7 @@ const Pricing = () => {
         "Unlimited deadlines",
         "Daily email reminders",
         "Priority email support",
-        "Advanced deadline management",
-        "Calendar integration",
-        "Custom reminder schedules"
+        "Advanced deadline management"
       ],
       buttonText: "Start Pro Trial",
       buttonVariant: "default" as const,
