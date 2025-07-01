@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -7,17 +8,17 @@ import { Check, Mail, Clock } from "lucide-react";
 const Pricing = () => {
   const plans = [
     {
-      name: "Free",
+      name: "Free Trial",
       price: "$0",
-      period: "forever",
-      description: "Perfect for trying out DueLex",
+      period: "for 14 days",
+      description: "Try DueLex risk-free for 2 weeks",
       features: [
-        "5 active deadlines",
+        "Unlimited deadlines",
         "Daily email reminders",
         "Email support",
-        "Basic deadline management"
+        "Full deadline management"
       ],
-      buttonText: "Start Free",
+      buttonText: "Start Free Trial",
       buttonVariant: "outline" as const,
       popular: false
     },
@@ -49,7 +50,7 @@ const Pricing = () => {
             Simple, Transparent Pricing
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Choose the plan that works for you. Start free, upgrade when you need more deadlines.
+            Start with a 2-week free trial, then just $9/month. No hidden fees, no long-term contracts.
           </p>
         </div>
       </section>
@@ -63,7 +64,7 @@ const Pricing = () => {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      After Free Trial
                     </span>
                   </div>
                 )}
@@ -112,12 +113,12 @@ const Pricing = () => {
           <div className="space-y-6">
             {[
               {
-                question: "Can I upgrade or downgrade my plan?",
-                answer: "Yes, you can change your plan at any time. Upgrades take effect immediately, and downgrades take effect at the end of your current billing cycle."
+                question: "What happens after my free trial ends?",
+                answer: "After your 14-day free trial, you'll be automatically enrolled in our Pro plan at $9/month. You can cancel anytime during or after the trial with no fees."
               },
               {
-                question: "What happens if I exceed my deadline limit on the free plan?",
-                answer: "We'll send you a friendly email letting you know you've reached your limit. You can either upgrade to Pro or wait until some deadlines pass to add new ones."
+                question: "Do I need to provide a credit card for the free trial?",
+                answer: "No credit card required! Just sign up with your email and start using DueLex immediately. We'll only ask for payment details when your trial is about to end."
               },
               {
                 question: "Is there a discount for annual billing?",
