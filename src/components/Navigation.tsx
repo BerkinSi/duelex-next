@@ -42,9 +42,11 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-              Sign Up Free
-            </Button>
+            <Link to="/signup">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                Sign Up Free
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -76,9 +78,11 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 pt-2">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                  Sign Up Free
-                </Button>
+                <Link to="/signup">
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                    Sign Up Free
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Mail, Clock, Shield, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -23,12 +24,16 @@ const Index = () => {
                 like "Add a deadline for the Smith case on July 10" and we'll handle the rest.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
-                  Sign Up Free
-                </Button>
-                <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3">
-                  See How It Works
-                </Button>
+                <Link to="/signup">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+                    Sign Up Free
+                  </Button>
+                </Link>
+                <Link to="/how-it-works">
+                  <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3">
+                    See How It Works
+                  </Button>
+                </Link>
               </div>
             </div>
             
@@ -164,9 +169,11 @@ const Index = () => {
           <p className="text-xl text-blue-100 mb-8">
             Join legal professionals who trust DueLex to manage their critical deadlines.
           </p>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
-            Start Free Trial
-          </Button>
+          <Link to="/signup">
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
+              Start Free Trial
+            </Button>
+          </Link>
           <p className="text-blue-200 mt-4">No credit card required • 5 free deadlines</p>
         </div>
       </section>
