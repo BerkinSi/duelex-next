@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Mail, Clock, Shield, CheckCircle } from "lucide-react";
+import { Mail, Clock, Shield, CheckCircle, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -19,14 +19,23 @@ const Index = () => {
               <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 Manage Legal Deadlines <span className="text-blue-600">via Email</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                 DueLex is your AI-powered legal deadline assistant. Simply send an email 
                 like "Add a deadline for the Smith case on July 10" and we'll handle the rest.
               </p>
+              <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-green-400 mb-8">
+                <div className="flex items-center gap-2 mb-1">
+                  <Calendar className="text-green-600" size={20} />
+                  <span className="font-semibold text-gray-900">14-Day Free Trial</span>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  Full access • No credit card required • Then $9/month
+                </p>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/signup">
                   <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
-                    Sign Up Free
+                    Start Free Trial
                   </Button>
                 </Link>
                 <Link to="/how-it-works">
@@ -160,6 +169,65 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Risk vs Solution */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              The Cost of Missing Just One Deadline
+            </h2>
+            <p className="text-xl text-gray-600">
+              Can be thousands of dollars in damages, lost clients, and reputation harm
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-bold text-red-600 mb-6">Without DueLex:</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-700">Manual calendar management prone to errors</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-700">Risk of missing critical filing deadlines</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-700">Potential malpractice claims</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-700">Lost client trust and referrals</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-green-600 mb-6">With DueLex:</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-green-500 mt-0.5 flex-shrink-0" size={20} />
+                  <span className="text-gray-700">Automated deadline tracking via email</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-green-500 mt-0.5 flex-shrink-0" size={20} />
+                  <span className="text-gray-700">Multiple reminders ensure you never miss</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-green-500 mt-0.5 flex-shrink-0" size={20} />
+                  <span className="text-gray-700">Peace of mind for less than $0.30/day</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="text-green-500 mt-0.5 flex-shrink-0" size={20} />
+                  <span className="text-gray-700">Enhanced professional reputation</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-blue-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -167,14 +235,14 @@ const Index = () => {
             Ready to Never Miss a Deadline Again?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join legal professionals who trust DueLex to manage their critical deadlines.
+            Start your free 14-day trial today. No credit card required.
           </p>
           <Link to="/signup">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
-              Start Free Trial
+              Start Free Trial Now
             </Button>
           </Link>
-          <p className="text-blue-200 mt-4">No credit card required • 5 free deadlines</p>
+          <p className="text-blue-200 mt-4">Free for 14 days • Then $9/month • Cancel anytime</p>
         </div>
       </section>
 

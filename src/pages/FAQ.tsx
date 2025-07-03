@@ -3,9 +3,35 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const FAQ = () => {
   const faqs = [
+    {
+      category: "Free Trial & Billing",
+      questions: [
+        {
+          question: "How does the free trial work?",
+          answer: "Start your 14-day free trial immediately with full access to all DueLex features. No credit card required to begin. Before your trial ends, you'll receive an email asking if you'd like to continue for $9/month or cancel with no charges."
+        },
+        {
+          question: "Do I need a credit card to start my free trial?",
+          answer: "No! You can start your free trial immediately without providing any payment information. We only ask for billing details if you choose to continue after your 14-day trial period."
+        },
+        {
+          question: "What happens when my free trial ends?",
+          answer: "A few days before your trial expires, we'll email you with the option to continue using DueLex for $9/month. If you don't take any action, your trial will simply end with no charges or obligations."
+        },
+        {
+          question: "Can I cancel anytime?",
+          answer: "Absolutely! You can cancel your subscription at any time with no penalties or cancellation fees. Your service continues until the end of your current billing period."
+        },
+        {
+          question: "Is there a long-term contract?",
+          answer: "No contracts ever. DueLex uses simple month-to-month billing, so you're never locked in and can cancel whenever you need to."
+        }
+      ]
+    },
     {
       category: "Getting Started",
       questions: [
@@ -15,7 +41,7 @@ const FAQ = () => {
         },
         {
           question: "What email address do I send my deadlines to?",
-          answer: "After signing up, you'll receive a unique email address like assistant-[yourname]@duelex.com. All your deadline requests should be sent to this address."
+          answer: "After starting your trial, you'll receive a unique email address like assistant-[yourname]@duelex.com. All your deadline requests should be sent to this address."
         },
         {
           question: "How quickly does DueLex respond to my emails?",
@@ -40,7 +66,7 @@ const FAQ = () => {
         },
         {
           question: "How far in advance will DueLex remind me?",
-          answer: "By default, you'll get reminders 7 days, 3 days, and 1 day before each deadline. Pro users can customize these reminder schedules."
+          answer: "By default, you'll get reminders 7 days, 3 days, and 1 day before each deadline. This ensures you never miss anything important."
         }
       ]
     },
@@ -49,7 +75,7 @@ const FAQ = () => {
       questions: [
         {
           question: "Is my data secure?",
-          answer: "Absolutely. We use enterprise-grade encryption and security measures. Your deadline information is stored securely and never shared with third parties."
+          answer: "Absolutely. We use enterprise-grade encryption and security measures designed specifically for legal professionals. Your deadline information is stored securely and never shared with third parties."
         },
         {
           question: "Who can see my deadlines?",
@@ -57,7 +83,7 @@ const FAQ = () => {
         },
         {
           question: "What happens to my data if I cancel?",
-          answer: "Your data is permanently deleted 30 days after cancellation. During those 30 days, you can reactivate your account and restore all your deadlines."
+          answer: "Your data is securely stored for 30 days after cancellation in case you want to reactivate. After 30 days, all your data is permanently deleted from our systems."
         }
       ]
     },
@@ -69,12 +95,12 @@ const FAQ = () => {
           answer: "DueLex works with all email providers including Gmail, Outlook, Apple Mail, and any other email client. As long as you can send emails, you can use DueLex."
         },
         {
-          question: "Can I integrate DueLex with my calendar?",
-          answer: "Pro users can enable calendar integration to automatically add deadlines to Google Calendar, Outlook, or Apple Calendar."
-        },
-        {
           question: "What if DueLex is down?",
           answer: "We maintain 99.9% uptime with redundant systems. In the rare case of downtime, any emails sent during that time are processed as soon as service is restored."
+        },
+        {
+          question: "Do you offer customer support?",
+          answer: "Yes! All users get priority email support. We typically respond within a few hours during business days and are here to help you get the most out of DueLex."
         }
       ]
     }
@@ -90,9 +116,14 @@ const FAQ = () => {
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Frequently Asked Questions
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed">
+          <p className="text-xl text-gray-600 leading-relaxed mb-8">
             Find answers to common questions about DueLex. Can't find what you're looking for? Contact our support team.
           </p>
+          <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-400 max-w-md mx-auto">
+            <p className="text-gray-800 font-medium">
+              Still have questions? <Link to="/signup" className="text-blue-600 hover:underline">Start your free trial</Link> and experience DueLex risk-free.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -127,14 +158,22 @@ const FAQ = () => {
       <section className="py-20 bg-blue-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Still Have Questions?
+            Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Our support team is here to help you get the most out of DueLex.
+            Try DueLex free for 14 days and see how it transforms your deadline management.
           </p>
-          <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
-            Contact Support
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/signup">
+              <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
+                Start Free Trial
+              </Button>
+            </Link>
+            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
+              Contact Support
+            </Button>
+          </div>
+          <p className="text-blue-200 mt-4">14 days free • No credit card required • $9/month after trial</p>
         </div>
       </section>
 

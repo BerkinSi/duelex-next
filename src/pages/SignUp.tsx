@@ -1,64 +1,15 @@
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { CheckCircle, Mail } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { CheckCircle, Mail, CreditCard } from "lucide-react";
 
 const SignUp = () => {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const { toast } = useToast();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    // Simulate API call - we'll replace this with Supabase later
-    setTimeout(() => {
-      setIsSubmitted(true);
-      setIsLoading(false);
-      toast({
-        title: "Welcome to DueLex!",
-        description: "We'll be in touch soon with your account details.",
-      });
-    }, 1000);
+  const handleStartTrial = () => {
+    // Replace this URL with your actual Lemon Squeezy checkout link
+    window.open("https://your-lemon-squeezy-checkout-link.com", "_blank");
   };
-
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen bg-white">
-        <Navigation />
-        <div className="min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-          <Card className="w-full max-w-md mx-4">
-            <CardContent className="p-8 text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="text-green-600" size={32} />
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                You're all set!
-              </h2>
-              <p className="text-gray-600 mb-6">
-                Thanks for signing up, {name}! We'll send you an email with your unique DueLex assistant address shortly.
-              </p>
-              <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
-                <p className="text-sm text-blue-800">
-                  <strong>What's next?</strong> Check your email for setup instructions and start managing your deadlines right away!
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-        <Footer />
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -76,59 +27,57 @@ const SignUp = () => {
               </p>
             </CardHeader>
             <CardContent className="p-6">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Full Name</Label>
-                  <Input
-                    id="name"
-                    type="text"
-                    placeholder="Enter your full name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email Address</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                </div>
+              <div className="text-center mb-8">
+                <div className="text-4xl font-bold text-gray-900 mb-2">14 Days Free</div>
+                <div className="text-lg text-gray-600 mb-1">Then $9/month</div>
+                <div className="text-sm text-gray-500">Cancel anytime • No setup fees</div>
+              </div>
 
-                <Button 
-                  type="submit" 
-                  className="w-full bg-blue-600 hover:bg-blue-700"
-                  disabled={isLoading}
-                >
-                  {isLoading ? "Setting up your account..." : "Sign Up Free"}
-                </Button>
-              </form>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="text-green-600 flex-shrink-0" size={20} />
+                  <span className="text-gray-700">Unlimited deadline management</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="text-green-600 flex-shrink-0" size={20} />
+                  <span className="text-gray-700">Daily email reminders</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="text-green-600 flex-shrink-0" size={20} />
+                  <span className="text-gray-700">Email-based deadline creation</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="text-green-600 flex-shrink-0" size={20} />
+                  <span className="text-gray-700">Priority support</span>
+                </div>
+              </div>
+
+              <Button 
+                onClick={handleStartTrial}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg"
+              >
+                Start 14-Day Free Trial
+              </Button>
 
               <div className="mt-6 p-4 bg-gray-50 rounded-lg">
                 <div className="flex items-start gap-3">
-                  <Mail className="text-blue-600 mt-0.5" size={20} />
+                  <CreditCard className="text-blue-600 mt-0.5" size={20} />
                   <div>
                     <p className="text-sm font-medium text-gray-900 mb-1">
-                      Free Trial Includes:
+                      How it works:
                     </p>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      <li>• 5 deadline reminders</li>
-                      <li>• Daily morning email summaries</li>
-                      <li>• Email-based deadline management</li>
-                      <li>• No credit card required</li>
+                      <li>• Start your free 14-day trial immediately</li>
+                      <li>• No credit card required to begin</li>
+                      <li>• We'll email you before your trial ends</li>
+                      <li>• Continue for $9/month or cancel anytime</li>
                     </ul>
                   </div>
                 </div>
               </div>
 
               <p className="text-xs text-gray-500 mt-4 text-center">
-                By signing up, you agree to our Terms of Service and Privacy Policy.
+                By starting your trial, you agree to our Terms of Service and Privacy Policy.
               </p>
             </CardContent>
           </Card>
