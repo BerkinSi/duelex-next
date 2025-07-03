@@ -11,7 +11,7 @@ const HowItWorks = () => {
     {
       icon: User,
       title: "Start Free Trial",
-      description: "Click to begin your 14-day free trial. No credit card needed - you'll get immediate access to all DueLex features and your unique email address."
+      description: "Click to begin your 1-month free trial. Credit card required but no charges for 30 days - you'll get immediate access to all DueLex features and your unique email address."
     },
     {
       icon: Mail,
@@ -46,10 +46,10 @@ const HowItWorks = () => {
           <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-green-400 max-w-md mx-auto">
             <div className="flex items-center gap-2 mb-1">
               <CreditCard className="text-green-600" size={20} />
-              <span className="font-semibold text-gray-900">14-Day Free Trial</span>
+              <span className="font-semibold text-gray-900">1-Month Free Trial</span>
             </div>
             <p className="text-gray-600 text-sm">
-              Try everything free • No credit card required
+              Try everything free • Credit card required but no charges for 30 days
             </p>
           </div>
         </div>
@@ -132,7 +132,7 @@ const HowItWorks = () => {
               What You Get During Your Free Trial
             </h2>
             <p className="text-xl text-gray-600">
-              Full access to all features for 14 days
+              Full access to all features for 1 month
             </p>
           </div>
 
@@ -161,19 +161,19 @@ const HowItWorks = () => {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-4">🔒 No Commitments</h3>
+                  <h3 className="text-xl font-semibold mb-4">🔒 Trial Terms</h3>
                   <ul className="space-y-3 text-gray-600">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="text-green-500" size={16} />
-                      No credit card required
+                      Credit card required to start
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="text-green-500" size={16} />
+                      No charges for first 30 days
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="text-green-500" size={16} />
                       Cancel anytime during trial
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="text-green-500" size={16} />
-                      No setup or cancellation fees
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="text-green-500" size={16} />
@@ -198,10 +198,10 @@ const HowItWorks = () => {
           </p>
           <Link to="/signup">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
-              Start 14-Day Free Trial
+              Start 1-Month Free Trial
             </Button>
           </Link>
-          <p className="text-blue-200 mt-4">No credit card • Full access • $9/month after trial</p>
+          <p className="text-blue-200 mt-4">Credit card required • Full access • $9/month after trial</p>
         </div>
       </section>
 

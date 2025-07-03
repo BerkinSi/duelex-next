@@ -26,10 +26,10 @@ const Index = () => {
               <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-green-400 mb-8">
                 <div className="flex items-center gap-2 mb-1">
                   <Calendar className="text-green-600" size={20} />
-                  <span className="font-semibold text-gray-900">14-Day Free Trial</span>
+                  <span className="font-semibold text-gray-900">1-Month Free Trial</span>
                 </div>
                 <p className="text-gray-600 text-sm">
-                  Full access • No credit card required • Then $9/month
+                  Full access • Credit card required • Then $9/month
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -235,14 +235,14 @@ const Index = () => {
             Ready to Never Miss a Deadline Again?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Start your free 14-day trial today. No credit card required.
+            Start your free 1-month trial today.
           </p>
           <Link to="/signup">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
               Start Free Trial Now
             </Button>
           </Link>
-          <p className="text-blue-200 mt-4">Free for 14 days • Then $9/month • Cancel anytime</p>
+          <p className="text-blue-200 mt-4">Free for 1 month • Then $9/month • Cancel anytime</p>
         </div>
       </section>
 

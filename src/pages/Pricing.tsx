@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Pricing = () => {
   const features = [
     "Unlimited deadline management",
-    "Daily email reminders",
+    "Daily email reminders", 
     "Email-based deadline creation",
     "Priority email support",
     "Secure & reliable service"
@@ -26,14 +26,14 @@ const Pricing = () => {
             Simple, Transparent Pricing
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed mb-8">
-            Start with a 14-day free trial, then continue for just $9/month. 
-            No credit card required to start.
+            Start with a 1-month free trial, then continue for just $9/month. 
+            Credit card required but no charges for the first month.
           </p>
           
           <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
             <div className="text-center mb-8">
               <div className="text-2xl font-semibold text-blue-600 mb-2">Start Free</div>
-              <div className="text-6xl font-bold text-gray-900 mb-2">14 Days</div>
+              <div className="text-6xl font-bold text-gray-900 mb-2">1 Month</div>
               <div className="text-xl text-gray-600 mb-4">Then $9/month</div>
               <div className="text-sm text-gray-500">No setup fees • Cancel anytime</div>
             </div>
@@ -53,7 +53,7 @@ const Pricing = () => {
               </Button>
             </Link>
             <p className="text-sm text-gray-500 mt-3 text-center">
-              No credit card required • Full access during trial
+              Credit card required • No charges for 30 days
             </p>
           </div>
         </div>
@@ -169,11 +169,11 @@ const Pricing = () => {
             {[
               {
                 question: "Do I need a credit card for the free trial?",
-                answer: "No! Start your 14-day trial immediately without any payment information. We'll only ask for billing details if you choose to continue after your trial."
+                answer: "Yes, we require a credit card to start your trial, but you won't be charged anything for the first month. This helps us prevent abuse and ensures a smooth transition if you choose to continue."
               },
               {
                 question: "What happens when my trial ends?",
-                answer: "We'll email you a few days before your trial expires. You can then choose to continue with DueLex for $9/month or let your trial end with no charges."
+                answer: "We'll email you a few days before your 1-month trial expires. If you don't cancel, your subscription will automatically continue at $9/month. You can cancel anytime before then with no charges."
               },
               {
                 question: "Can I cancel anytime?",
@@ -185,7 +185,7 @@ const Pricing = () => {
               },
               {
                 question: "What if I don't like DueLex during the trial?",
-                answer: "Simply don't continue after your trial ends. You won't be charged anything, and there are no obligations or hassles."
+                answer: "Simply cancel before your 1-month trial ends and you won't be charged anything. No questions asked, no hassles."
               }
             ].map((faq, index) => (
               <Card key={index} className="p-6">
@@ -214,10 +214,10 @@ const Pricing = () => {
           </p>
           <Link to="/signup">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
-              Start 14-Day Free Trial
+              Start 1-Month Free Trial
             </Button>
           </Link>
-          <p className="text-blue-200 mt-4">No credit card required • $9/month after trial</p>
+          <p className="text-blue-200 mt-4">Credit card required • $9/month after trial</p>
         </div>
       </section>
 

@@ -12,15 +12,15 @@ const FAQ = () => {
       questions: [
         {
           question: "How does the free trial work?",
-          answer: "Start your 14-day free trial immediately with full access to all DueLex features. No credit card required to begin. Before your trial ends, you'll receive an email asking if you'd like to continue for $9/month or cancel with no charges."
+          answer: "Start your 1-month free trial immediately with full access to all DueLex features. Credit card is required to prevent abuse, but you won't be charged anything for the first 30 days. Before your trial ends, you can choose to continue for $9/month or cancel with no charges."
         },
         {
           question: "Do I need a credit card to start my free trial?",
-          answer: "No! You can start your free trial immediately without providing any payment information. We only ask for billing details if you choose to continue after your 14-day trial period."
+          answer: "Yes, we require a credit card to start your trial to prevent abuse and ensure a smooth experience. However, you won't be charged anything during your first month. If you cancel before the trial ends, you won't be charged at all."
         },
         {
           question: "What happens when my free trial ends?",
-          answer: "A few days before your trial expires, we'll email you with the option to continue using DueLex for $9/month. If you don't take any action, your trial will simply end with no charges or obligations."
+          answer: "A few days before your 1-month trial expires, we'll email you with a reminder. If you don't cancel, your subscription will automatically continue at $9/month. You can cancel anytime before then to avoid any charges."
         },
         {
           question: "Can I cancel anytime?",
@@ -161,7 +161,7 @@ const FAQ = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Try DueLex free for 14 days and see how it transforms your deadline management.
+            Try DueLex free for 1 month and see how it transforms your deadline management.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/signup">
@@ -173,7 +173,7 @@ const FAQ = () => {
               Contact Support
             </Button>
           </div>
-          <p className="text-blue-200 mt-4">14 days free • No credit card required • $9/month after trial</p>
+          <p className="text-blue-200 mt-4">1 month free • Credit card required • $9/month after trial</p>
         </div>
       </section>
 

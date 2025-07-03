@@ -28,7 +28,7 @@ const SignUp = () => {
             </CardHeader>
             <CardContent className="p-6">
               <div className="text-center mb-8">
-                <div className="text-4xl font-bold text-gray-900 mb-2">14 Days Free</div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">1 Month Free</div>
                 <div className="text-lg text-gray-600 mb-1">Then $9/month</div>
                 <div className="text-sm text-gray-500">Cancel anytime • No setup fees</div>
               </div>
@@ -56,7 +56,7 @@ const SignUp = () => {
                 onClick={handleStartTrial}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg"
               >
-                Start 14-Day Free Trial
+                Start 1-Month Free Trial
               </Button>
 
               <div className="mt-6 p-4 bg-gray-50 rounded-lg">
@@ -67,9 +67,9 @@ const SignUp = () => {
                       How it works:
                     </p>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      <li>• Start your free 14-day trial immediately</li>
-                      <li>• No credit card required to begin</li>
-                      <li>• We'll email you before your trial ends</li>
+                      <li>• Start your free 1-month trial immediately</li>
+                      <li>• Credit card required but no charges for 30 days</li>
+                      <li>• We'll notify you before your trial ends</li>
                       <li>• Continue for $9/month or cancel anytime</li>
                     </ul>
                   </div>
