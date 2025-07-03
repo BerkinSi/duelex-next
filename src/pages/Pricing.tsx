@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Check, CreditCard, Calendar, Mail, Clock } from "lucide-react";
+import { Check, Calendar, Mail, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Pricing = () => {
@@ -26,8 +26,7 @@ const Pricing = () => {
             Simple, Transparent Pricing
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed mb-8">
-            Start with a 1-month free trial, then continue for just $9/month. 
-            Credit card required but no charges for the first month.
+            1 month free trial - continue having an assistant for only $9 a month later.
           </p>
           
           <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
@@ -53,7 +52,7 @@ const Pricing = () => {
               </Button>
             </Link>
             <p className="text-sm text-gray-500 mt-3 text-center">
-              Credit card required • No charges for 30 days
+              1 month free trial - continue having an assistant for only $9 a month later
             </p>
           </div>
         </div>
@@ -78,8 +77,7 @@ const Pricing = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">1. Start Free Trial</h3>
               <p className="text-gray-600">
-                Begin immediately with full access to all DueLex features. 
-                No credit card required for your 14-day trial.
+                Begin immediately with full access to all DueLex features for 1 month completely free.
               </p>
             </Card>
 
@@ -96,7 +94,7 @@ const Pricing = () => {
 
             <Card className="p-8 text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CreditCard className="text-purple-600" size={24} />
+                <Check className="text-purple-600" size={24} />
               </div>
               <h3 className="text-xl font-semibold mb-4">3. Continue Seamlessly</h3>
               <p className="text-gray-600">
@@ -168,8 +166,8 @@ const Pricing = () => {
           <div className="space-y-6">
             {[
               {
-                question: "Do I need a credit card for the free trial?",
-                answer: "Yes, we require a credit card to start your trial, but you won't be charged anything for the first month. This helps us prevent abuse and ensures a smooth transition if you choose to continue."
+                question: "How does the free trial work?",
+                answer: "Start your 1-month free trial immediately with full access to all DueLex features. After the trial period ends, you can choose to continue for $9/month or cancel with no charges."
               },
               {
                 question: "What happens when my trial ends?",
@@ -217,7 +215,7 @@ const Pricing = () => {
               Start 1-Month Free Trial
             </Button>
           </Link>
-          <p className="text-blue-200 mt-4">Credit card required • $9/month after trial</p>
+          <p className="text-blue-200 mt-4">1 month free trial - continue having an assistant for only $9 a month later</p>
         </div>
       </section>
 
