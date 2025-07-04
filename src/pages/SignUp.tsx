@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CheckCircle, Mail, CreditCard } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const handleStartTrial = () => {
@@ -68,16 +69,24 @@ const SignUp = () => {
                     </p>
                     <ul className="text-sm text-gray-600 space-y-1">
                       <li>• Start your free 1-month trial immediately</li>
-                      <li>• Credit card required but no charges for 30 days</li>
+                      <li>• Continue having an assistant for only $9/month later</li>
                       <li>• We'll notify you before your trial ends</li>
-                      <li>• Continue for $9/month or cancel anytime</li>
+                      <li>• Cancel anytime with no penalties</li>
                     </ul>
                   </div>
                 </div>
               </div>
 
               <p className="text-xs text-gray-500 mt-4 text-center">
-                By starting your trial, you agree to our Terms of Service and Privacy Policy.
+                By starting your trial, you agree to our{" "}
+                <Link to="/terms-of-service" className="text-blue-600 hover:underline">
+                  Terms of Service
+                </Link>{" "}
+                and{" "}
+                <Link to="/privacy-policy" className="text-blue-600 hover:underline">
+                  Privacy Policy
+                </Link>
+                .
               </p>
             </CardContent>
           </Card>
