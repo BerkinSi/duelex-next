@@ -8,7 +8,7 @@ import { CheckCircle, Mail, CreditCard } from "lucide-react";
 const SignUp = () => {
   const handleStartTrial = () => {
     // Replace this URL with your actual Lemon Squeezy checkout link
-    window.open("https://your-lemon-squeezy-checkout-link.com", "_blank");
+    window.open("https://duelex.gumroad.com/l/vkujk", "_blank");
   };
 
   return (
