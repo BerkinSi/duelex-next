@@ -1,5 +1,4 @@
-
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -20,17 +19,17 @@ const Footer = () => {
             <h3 className="font-semibold text-gray-900 mb-4">Product</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/how-it-works" className="text-gray-600 hover:text-blue-600">
+                <Link href="/how-it-works" className="text-gray-600 hover:text-blue-600">
                   How It Works
                 </Link>
               </li>
               <li>
-                <Link to="/pricing" className="text-gray-600 hover:text-blue-600">
+                <Link href="/pricing" className="text-gray-600 hover:text-blue-600">
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="text-gray-600 hover:text-blue-600">
+                <Link href="/faq" className="text-gray-600 hover:text-blue-600">
                   FAQ
                 </Link>
               </li>
@@ -41,22 +40,25 @@ const Footer = () => {
             <h3 className="font-semibold text-gray-900 mb-4">Support</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/contact" className="text-gray-600 hover:text-blue-600">
+                <Link href="/contact" className="text-gray-600 hover:text-blue-600">
                   Contact
                 </Link>
               </li>
               <li>
-                <a href="mailto:support@duelex.com" className="text-gray-600 hover:text-blue-600">
+                <a
+                  href="mailto:support@duelex.com"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   Email Support
                 </a>
               </li>
               <li>
-                <Link to="/terms-of-service" className="text-gray-600 hover:text-blue-600">
+                <Link href="/terms-of-service" className="text-gray-600 hover:text-blue-600">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link to="/privacy-policy" className="text-gray-600 hover:text-blue-600">
+                <Link href="/privacy-policy" className="text-gray-600 hover:text-blue-600">
                   Privacy Policy
                 </Link>
               </li>

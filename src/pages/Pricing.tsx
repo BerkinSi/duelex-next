@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Check, Calendar, Mail, Clock } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link"
 
 const Pricing = () => {
   const features = [
@@ -46,7 +46,7 @@ const Pricing = () => {
               ))}
             </div>
 
-            <Link to="/signup">
+            <Link href="/signup">
               <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg">
                 Start Your Free Trial
               </Button>
@@ -210,7 +210,7 @@ const Pricing = () => {
           <p className="text-xl text-blue-100 mb-8">
             Start your free trial today and experience peace of mind.
           </p>
-          <Link to="/signup">
+          <Link href="/signup">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
               Start 1-Month Free Trial
             </Button>

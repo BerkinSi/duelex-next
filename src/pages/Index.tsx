@@ -4,7 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Mail, Clock, Shield, CheckCircle, Calendar } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+
 
 const Index = () => {
   return (
@@ -33,12 +34,12 @@ const Index = () => {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/signup">
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+                <Link href="/signup">
+                  <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
                     Start Free Trial
                   </Button>
                 </Link>
-                <Link to="/how-it-works">
+                <Link href="/how-it-works">
                   <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3">
                     See How It Works
                   </Button>
@@ -237,8 +238,8 @@ const Index = () => {
           <p className="text-xl text-blue-100 mb-8">
             Start your free 1-month trial today.
           </p>
-          <Link to="/signup">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
+          <Link href="/signup">
+            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
               Start Free Trial Now
             </Button>
           </Link>

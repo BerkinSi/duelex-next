@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Mail, User, Bell, CheckCircle, CreditCard } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link"
+
 
 const HowItWorks = () => {
   const steps = [
@@ -196,8 +197,8 @@ const HowItWorks = () => {
           <p className="text-xl text-blue-100 mb-8">
             Start your free trial now and see how easy deadline management can be.
           </p>
-          <Link to="/signup">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
+          <Link href="/signup">
+            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
               Start 1-Month Free Trial
             </Button>
           </Link>

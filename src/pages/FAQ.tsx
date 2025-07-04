@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import Link from "next/link"
 
 const FAQ = () => {
   const faqs = [
@@ -121,7 +121,7 @@ const FAQ = () => {
           </p>
           <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-400 max-w-md mx-auto">
             <p className="text-gray-800 font-medium">
-              Still have questions? <Link to="/signup" className="text-blue-600 hover:underline">Start your free trial</Link> and experience DueLex risk-free.
+              Still have questions? <Link href="/signup" className="text-blue-600 hover:underline">Start your free trial</Link> and experience DueLex risk-free.
             </p>
           </div>
         </div>
@@ -164,8 +164,8 @@ const FAQ = () => {
             Try DueLex free for 1 month and see how it transforms your deadline management.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/signup">
-              <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
+            <Link href="/signup">
+              <Button asChild className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
                 Start Free Trial
               </Button>
             </Link>

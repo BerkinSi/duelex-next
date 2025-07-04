@@ -1,12 +1,14 @@
+"use client";
 
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -16,14 +18,14 @@ const Navigation = () => {
     { name: "Contact", path: "/contact" },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => pathname === path;
 
   return (
     <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-blue-600">
+          <Link href="/" className="text-2xl font-bold text-blue-600">
             DueLex
           </Link>
 
@@ -32,7 +34,7 @@ const Navigation = () => {
             {navItems.map((item) => (
               <Link
                 key={item.name}
-                to={item.path}
+                href={item.path}
                 className={`text-sm font-medium transition-colors hover:text-blue-600 ${
                   isActive(item.path)
                     ? "text-blue-600 border-b-2 border-blue-600"
@@ -42,8 +44,8 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Link to="/signup">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+            <Link href="/signup">
+              <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
                 Sign Up Free
               </Button>
             </Link>
@@ -68,7 +70,7 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <Link
                   key={item.name}
-                  to={item.path}
+                  href={item.path}
                   className={`block px-3 py-2 text-base font-medium transition-colors hover:text-blue-600 ${
                     isActive(item.path) ? "text-blue-600" : "text-gray-700"
                   }`}
@@ -78,8 +80,8 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 pt-2">
-                <Link to="/signup">
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                <Link href="/signup">
+                  <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                     Sign Up Free
                   </Button>
                 </Link>

@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CheckCircle, Mail, CreditCard } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link"
 
 const SignUp = () => {
   const handleStartTrial = () => {
@@ -79,11 +79,11 @@ const SignUp = () => {
 
               <p className="text-xs text-gray-500 mt-4 text-center">
                 By starting your trial, you agree to our{" "}
-                <Link to="/terms-of-service" className="text-blue-600 hover:underline">
+                <Link href="/terms-of-service" className="text-blue-600 hover:underline">
                   Terms of Service
                 </Link>{" "}
                 and{" "}
-                <Link to="/privacy-policy" className="text-blue-600 hover:underline">
+                <Link href="/privacy-policy" className="text-blue-600 hover:underline">
                   Privacy Policy
                 </Link>
                 .
