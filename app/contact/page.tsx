@@ -1,3 +1,4 @@
+'use client'
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -60,7 +61,7 @@ const Contact = () => {
                 Need help with your account, billing, or subscription? We're here to assist.
               </p>
               <Button variant="outline" className="w-full border-purple-600 text-purple-600 hover:bg-purple-50">
-                <a href="mailto:accounts@duelex.com">accounts@duelex.com</a>
+                <a href="mailto:support@duelex.com">support@duelex.com</a>
               </Button>
             </Card>
           </div>

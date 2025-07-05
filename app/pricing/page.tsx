@@ -1,3 +1,4 @@
+'use client';
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -45,12 +46,12 @@ const Pricing = () => {
                 </div>
               ))}
             </div>
-
-            <Link href="/signup">
+            
               <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg">
+                <Link href="/signup">
                 Start Your Free Trial
+                </Link>
               </Button>
-            </Link>
             <p className="text-sm text-gray-500 mt-3 text-center">
               1 month free trial - continue having an assistant for only $9 a month later
             </p>

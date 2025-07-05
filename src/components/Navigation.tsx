@@ -43,12 +43,12 @@ const Navigation = () => {
               >
                 {item.name}
               </Link>
-            ))}
-            <Link href="/signup">
+            ))}            
               <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
+                <Link href="/signup">
                 Sign Up Free
-              </Button>
-            </Link>
+                </Link>
+              </Button>            
           </div>
 
           {/* Mobile menu button */}
@@ -79,12 +79,12 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="px-3 pt-2">
-                <Link href="/signup">
+              <div className="px-3 pt-2">                
                   <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                    <Link href="/signup">
                     Sign Up Free
-                  </Button>
-                </Link>
+                    </Link>
+                  </Button>                
               </div>
             </div>
           </div>

@@ -1,3 +1,4 @@
+'use client'
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -196,12 +197,12 @@ const HowItWorks = () => {
           </h2>
           <p className="text-xl text-blue-100 mb-8">
             Start your free trial now and see how easy deadline management can be.
-          </p>
-          <Link href="/signup">
+          </p>          
             <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
+              <Link href="/signup">
               Start 1-Month Free Trial
-            </Button>
-          </Link>
+              </Link>
+            </Button>          
           <p className="text-blue-200 mt-4">Credit card required • Full access • $9/month after trial</p>
         </div>
       </section>

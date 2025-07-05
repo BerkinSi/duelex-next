@@ -33,12 +33,12 @@ const Index = () => {
                   Full access • Credit card required • Then $9/month
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/signup">
+              <div className="flex flex-col sm:flex-row gap-4">                
                   <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+                    <Link href="/signup">
                     Start Free Trial
-                  </Button>
-                </Link>
+                    </Link>
+                  </Button>                
                 <Link href="/how-it-works">
                   <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3">
                     See How It Works
@@ -237,12 +237,12 @@ const Index = () => {
           </h2>
           <p className="text-xl text-blue-100 mb-8">
             Start your free 1-month trial today.
-          </p>
-          <Link href="/signup">
-            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
+          </p>          
+            <Button asChild  size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
+              <Link href="/signup">
               Start Free Trial Now
-            </Button>
-          </Link>
+              </Link>
+            </Button>          
           <p className="text-blue-200 mt-4">Free for 1 month • Then $9/month • Cancel anytime</p>
         </div>
       </section>
