@@ -7,18 +7,58 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+dist-ssr/
+.next/
+out/
+
+# Build cache
+.cache/
+.nyc_output/
+.vite/
+*.tsbuildinfo
+
+# Env files
+.env
+.env.*.local
 *.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# OS
 .DS_Store
+Thumbs.db
+Icon?
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Misc
+coverage/
+*.tgz
+*.gz
+*.zip
+
+# Firebase / Vercel / Netlify
+.firebaserc
+.firebase/
+.vercel/
+.netlify/
+
+# Fork-specific
+.fork/
