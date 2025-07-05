@@ -35,7 +35,7 @@ const Contact = () => {
               <p className="text-gray-600 mb-6">
                 Get help with any questions or issues. We typically respond within 4 hours during business days.
               </p>
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+              <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                 <a href="mailto:support@duelex.com">support@duelex.com</a>
               </Button>
             </Card>

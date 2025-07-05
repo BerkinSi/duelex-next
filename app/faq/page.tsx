@@ -169,7 +169,7 @@ const FAQ = () => {
                 Start Free Trial
                 </Link>
               </Button>            
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
+            <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
               Contact Support
             </Button>
           </div>
