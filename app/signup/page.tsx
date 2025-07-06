@@ -1,18 +1,11 @@
-"use client";
-
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SignupTrialButton from "@/components/SignupTrialButton";
 import { CheckCircle, Mail, CreditCard } from "lucide-react";
 import Link from "next/link"
 
-const SignUp = () => {
-  const handleStartTrial = () => {
-    // Replace this URL with your actual Lemon Squeezy checkout link
-    window.open("https://duelex.gumroad.com/l/vkujk", "_blank");
-  };
-
+export default function SignUpPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -54,12 +47,7 @@ const SignUp = () => {
                 </div>
               </div>
 
-              <Button
-                onClick={handleStartTrial}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg"
-              >
-                Start 1-Month Free Trial
-              </Button>
+              <SignupTrialButton />
 
               <div className="mt-6 p-4 bg-gray-50 rounded-lg">
                 <div className="flex items-start gap-3">
@@ -97,6 +85,4 @@ const SignUp = () => {
       <Footer />
     </div>
   );
-};
-
-export default SignUp;
+}

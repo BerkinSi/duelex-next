@@ -1,13 +1,10 @@
-"use client";
-
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { PricingTrialButton, PricingCTAButton } from "@/components/PricingButtons";
 import { Check, Calendar, Mail, Clock } from "lucide-react";
-import Link from "next/link"
 
-const Pricing = () => {
+export default function PricingPage() {
   const features = [
     "Unlimited deadline management",
     "Daily email reminders", 
@@ -37,7 +34,6 @@ const Pricing = () => {
               <div className="text-xl text-gray-600 mb-4">Then $9/month</div>
               <div className="text-sm text-gray-500">No setup fees • Cancel anytime</div>
             </div>
-            
             <div className="space-y-4 mb-8">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center gap-3">
@@ -46,12 +42,7 @@ const Pricing = () => {
                 </div>
               ))}
             </div>
-            
-              <Button asChild size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg">
-                <Link href="/signup">
-                Start Your Free Trial
-                </Link>
-              </Button>
+            <PricingTrialButton />
             <p className="text-sm text-gray-500 mt-3 text-center">
               1 month free trial - continue having an assistant for only $9 a month later
             </p>
@@ -211,11 +202,7 @@ const Pricing = () => {
           <p className="text-xl text-blue-100 mb-8">
             Start your free trial today and experience peace of mind.
           </p>
-          <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
-            <Link href="/signup">
-              Start 1-Month Free Trial
-            </Link>
-          </Button>
+          <PricingCTAButton />
           <p className="text-blue-200 mt-4">1 month free trial - continue having an assistant for only $9 a month later</p>
         </div>
       </section>
@@ -223,6 +210,4 @@ const Pricing = () => {
       <Footer />
     </div>
   );
-};
-
-export default Pricing;
+}

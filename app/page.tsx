@@ -1,14 +1,11 @@
-"use client";
-
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import HeroButtons from "@/components/HeroButtons";
+import CTAButton from "@/components/CTAButton";
 import { Mail, Clock, Shield, CheckCircle, Calendar } from "lucide-react";
-import Link from "next/link";
 
-
-const Index = () => {
+export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -34,18 +31,7 @@ const Index = () => {
                   Full access • Credit card required • Then $9/month
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">                
-                  <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
-                    <Link href="/signup">
-                    Start Free Trial
-                    </Link>
-                  </Button>                
-                <Button asChild size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3">
-                  <Link href="/how-it-works">
-                    See How It Works
-                  </Link>
-                </Button>
-              </div>
+              <HeroButtons />
             </div>
             
             {/* Email Demo Visual */}
@@ -238,12 +224,8 @@ const Index = () => {
           </h2>
           <p className="text-xl text-blue-100 mb-8">
             Start your free 1-month trial today.
-          </p>          
-            <Button asChild  size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
-              <Link href="/signup">
-              Start Free Trial Now
-              </Link>
-            </Button>          
+          </p>
+          <CTAButton />
           <p className="text-blue-200 mt-4">Free for 1 month • Then $9/month • Cancel anytime</p>
         </div>
       </section>
@@ -251,6 +233,4 @@ const Index = () => {
       <Footer />
     </div>
   );
-};
-
-export default Index;
+}

@@ -1,10 +1,8 @@
-"use client";
-
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Mail, Clock, User } from "lucide-react";
+import { EmailSupportButton, AccountHelpButton, EmergencyContactButton } from "@/components/ContactButtons";
 
 const Contact = () => {
   return (
@@ -35,9 +33,7 @@ const Contact = () => {
               <p className="text-gray-600 mb-6">
                 Get help with any questions or issues. We typically respond within 4 hours during business days.
               </p>
-              <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                <a href="mailto:support@duelex.com">support@duelex.com</a>
-              </Button>
+              <EmailSupportButton />
             </Card>
 
             <Card className="p-8 text-center hover:shadow-lg transition-shadow">
@@ -60,9 +56,7 @@ const Contact = () => {
               <p className="text-gray-600 mb-6">
                 Need help with your account, billing, or subscription? We're here to assist.
               </p>
-              <Button asChild variant="outline" className="w-full border-purple-600 text-purple-600 hover:bg-purple-50">
-                <a href="mailto:support@duelex.com">support@duelex.com</a>
-              </Button>
+              <AccountHelpButton />
             </Card>
           </div>
         </div>
@@ -132,9 +126,7 @@ const Contact = () => {
             If you have a critical deadline issue that needs immediate attention outside of business hours, 
             please mark your email as "URGENT" in the subject line.
           </p>
-          <Button asChild className="bg-red-600 hover:bg-red-700 text-white px-8 py-3">
-            <a href="mailto:support@duelex.com?subject=URGENT">Send Urgent Email</a>
-          </Button>
+          <EmergencyContactButton />
           <p className="text-red-600 mt-4 text-sm">
             Emergency support is available for Pro users only
           </p>

@@ -1,12 +1,9 @@
-"use client";
-
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import Link from "next/link"
+import FAQButtons from "@/components/FAQButtons";
 
-const FAQ = () => {
+export default function FAQPage() {
   const faqs = [
     {
       category: "Free Trial & Billing",
@@ -122,7 +119,7 @@ const FAQ = () => {
           </p>
           <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-400 max-w-md mx-auto">
             <p className="text-gray-800 font-medium">
-              Still have questions? <Link href="/signup" className="text-blue-600 hover:underline">Start your free trial</Link> and experience DueLex risk-free.
+              Still have questions? <a href="/signup" className="text-blue-600 hover:underline">Start your free trial</a> and experience DueLex risk-free.
             </p>
           </div>
         </div>
@@ -164,16 +161,7 @@ const FAQ = () => {
           <p className="text-xl text-blue-100 mb-8">
             Try DueLex free for 1 month and see how it transforms your deadline management.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">          
-              <Button asChild className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
-                <Link href="/signup">
-                Start Free Trial
-                </Link>
-              </Button>            
-            <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
-              <a href="mailto:support@duelex.com">Contact Support</a>
-            </Button>
-          </div>
+          <FAQButtons />
           <p className="text-blue-200 mt-4">1 month free • Credit card required • $9/month after trial</p>
         </div>
       </section>
@@ -181,6 +169,4 @@ const FAQ = () => {
       <Footer />
     </div>
   );
-};
-
-export default FAQ;
+}
