@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -52,7 +54,7 @@ const SignUp = () => {
                 </div>
               </div>
 
-              <Button asChild
+              <Button
                 onClick={handleStartTrial}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg"
               >

@@ -1,3 +1,4 @@
+"use client";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -39,11 +40,11 @@ const Index = () => {
                     Start Free Trial
                     </Link>
                   </Button>                
-                <Link href="/how-it-works">
-                  <Button asChild size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3">
+                <Button asChild size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3">
+                  <Link href="/how-it-works">
                     See How It Works
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               </div>
             </div>
             

@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -209,11 +211,11 @@ const Pricing = () => {
           <p className="text-xl text-blue-100 mb-8">
             Start your free trial today and experience peace of mind.
           </p>
-          <Link href="/signup">
-            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
+          <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
+            <Link href="/signup">
               Start 1-Month Free Trial
-            </Button>
-          </Link>
+            </Link>
+          </Button>
           <p className="text-blue-200 mt-4">1 month free trial - continue having an assistant for only $9 a month later</p>
         </div>
       </section>

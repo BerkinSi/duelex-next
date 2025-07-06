@@ -1,3 +1,4 @@
+"use client";
 
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -170,7 +171,7 @@ const FAQ = () => {
                 </Link>
               </Button>            
             <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
-              Contact Support
+              <a href="mailto:support@duelex.com">Contact Support</a>
             </Button>
           </div>
           <p className="text-blue-200 mt-4">1 month free • Credit card required • $9/month after trial</p>
